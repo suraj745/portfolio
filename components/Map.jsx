@@ -1,5 +1,4 @@
-import { Box, Text, Flex } from "@chakra-ui/react";
-
+import { Box, Text, Flex, Heading } from "@chakra-ui/react";
 import { BsLinkedin } from "react-icons/bs";
 
 const Map = () => {
@@ -38,14 +37,13 @@ const Map = () => {
           </Flex>
         </Box>
       </Box>
-      <Box id="map">
-        <iframe
-          src="https://snazzymaps.com/embed/372887"
-          width="100%"
-          height="600px"
-          style={{ border: "none" }}
-        ></iframe>
-      </Box>
+
+      <iframe
+        src="https://api.maptiler.com/maps/basic/?key=JRxt1LtK48oxGSQf9DhU#4.4/18.8039228/73.2920411"
+        width="100%"
+        height="600px"
+        style={{ border: "none" }}
+      ></iframe>
     </Box>
   );
 };

@@ -10,7 +10,7 @@ export default class document extends Document {
 
         <body style={{ background: "#1d1d1d" }}>
           <Main />
-          <NextScript />
+          <NextScript></NextScript>
         </body>
       </Html>
     );

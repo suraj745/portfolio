@@ -8,7 +8,7 @@ import {
 import "@fontsource/libre-franklin/700.css";
 import "@fontsource/open-sans";
 import Particle from "../components/Particle";
-import Layout from "../layout/layout";
+import Layout from "../layout/Layout";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { motion } from "framer-motion";
@@ -35,15 +35,14 @@ const App = ({ Component, pageProps }) => {
 
   useEffect(() => {
     Aos.init({ duration: 1000 });
-  });
+  }, []);
+
+  // window.onload(()=>{setLoading(false)};
 
   const router = useRouter();
 
-  Router.events.on("routeChangeStart", () => {
-    setLoading(true);
-  });
   Router.events.on("routeChangeComplete", () => {
-    setLoading(false);
+    setLoading(true);
   });
 
   return (

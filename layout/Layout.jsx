@@ -4,10 +4,9 @@ import { Box } from "@chakra-ui/react";
 const Layout = ({ children }) => {
   return (
     <>
-      <Box>
+      <Box as="nav">
         <Navbar />
       </Box>
-
       <Box as={"main"}>{children}</Box>
     </>
   );

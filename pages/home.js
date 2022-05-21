@@ -1,4 +1,12 @@
-import { Stack, Heading, HStack, Box, Button, Flex } from "@chakra-ui/react";
+import {
+  Stack,
+  Heading,
+  HStack,
+  Box,
+  Button,
+  Flex,
+  useToast,
+} from "@chakra-ui/react";
 import { motion } from "framer-motion";
 const text1 = `Hello,`;
 const text2 = `I'm  SurajArya`;
@@ -79,22 +87,38 @@ const Home = () => {
               );
             })}
           </HStack>
+          <HStack alignItems={"center"} marginTop={"2rem"}>
+            <Link href={"/contact"} passHref>
+              <Button
+                width={"10rem"}
+                height={"3rem"}
+                borderColor={"teal"}
+                background={"transparent"}
+                variant={"outline"}
+                color={"teal"}
+                rightIcon={<AiOutlinePhone fontSize={"1.5rem"} />}
+                _hover={{ bg: "teal", color: "dark" }}
+              >
+                Contact Me
+              </Button>
+            </Link>
 
-          <Link href={"/contact"} passHref>
-            <Button
-              width={"10rem"}
-              height={"3rem"}
-              borderColor={"teal"}
-              background={"transparent"}
-              variant={"outline"}
-              color={"teal"}
-              marginTop={"2rem"}
-              rightIcon={<AiOutlinePhone fontSize={"1.5rem"} />}
-              _hover={{ bg: "teal", color: "dark" }}
+            <audio
+              controls
+              id="music"
+              onPlay={(e) => {
+                console.log(e);
+              }}
+              style={{
+                border: "1px solid #05fdd8",
+                borderRadius: "0.3rem",
+                height: "3rem",
+                width: "4rem",
+              }}
             >
-              Contact Me
-            </Button>
-          </Link>
+              <source src="/david.mp3" type="audio/ogg" />
+            </audio>
+          </HStack>
         </Box>
       </Stack>
     </>

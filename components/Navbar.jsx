@@ -23,7 +23,7 @@ const Navbar = () => {
   const [cross, setCross] = useBoolean(false);
 
   useEffect(() => {
-    cross ? disableBodyScroll(document) : enableBodyScroll(document);
+    cross ? disableBodyScroll(document.body) : enableBodyScroll(document.body);
   }, [cross]);
   return (
     <>

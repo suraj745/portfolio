@@ -20,7 +20,7 @@ const Card = ({ imgUrl, hostUrl }) => {
           brightness: "100%",
         }}
       >
-        <Box href={hostUrl}>
+        <Box as={"a"} href={hostUrl}>
           <Image
             src={imgUrl}
             width={"336"}
